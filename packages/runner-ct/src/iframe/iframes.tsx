@@ -86,10 +86,12 @@ export const Iframes: React.FC<IFramesProps> = namedObserver('Iframes', (props) 
         dispose()
       })
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
     props.state.callbackAfterUpdate?.()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.state.callbackAfterUpdate])
 
   const _toggleSnapshotHighlights = (snapshotProps) => {
