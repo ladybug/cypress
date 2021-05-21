@@ -59,7 +59,7 @@ export const Iframes: React.FC<IFramesProps> = namedObserver('Iframes', (props) 
       _run(props.state.spec, props.config)
     })
 
-    props.eventManager.on('print:selector:elements:to:console', _printSelectorElementsToConsole)
+    props.eventManager.on('print:selector:elements:to:console', autIframe.printSelectorElementsToConsole)
 
     props.eventManager.start(props.config)
 
@@ -120,10 +120,6 @@ export const Iframes: React.FC<IFramesProps> = namedObserver('Iframes', (props) 
   const _setScriptError = action((err: string | undefined) => {
     props.state.scriptError = err
   })
-
-  const _printSelectorElementsToConsole = () => {
-    autIframe.printSelectorElementsToConsole()
-  }
 
   const _run = (spec, config) => {
     config.spec = spec
