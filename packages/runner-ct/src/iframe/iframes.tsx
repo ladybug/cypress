@@ -21,7 +21,7 @@ export function getSpecUrl ({ namespace, spec }, prefix = '') {
 interface IFramesProps {
   state: State
   eventManager: typeof eventManager
-  config: any
+  config: Cypress.RuntimeConfigOptions
 }
 
 export const Iframes: React.FC<IFramesProps> = namedObserver('Iframes', (props) => {
