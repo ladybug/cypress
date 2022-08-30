@@ -24,7 +24,7 @@
     "cypress": "0.0.0-development",
     "cypress-circleci-reporter": "0.2.0",
     "react": "17.0.2",
-    "vite": "2.2.3",
+    "vite": "2.9.13",
     "vue": "3.0.11"
   },
   "peerDependencies": {
